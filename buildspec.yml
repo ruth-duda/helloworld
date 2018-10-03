@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm install
+      - cd lambda/custom && npm install
   build:
     commands:
-      - npm test
+      - cd lambda/custom && npm test
