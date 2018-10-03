@@ -6,4 +6,4 @@ phases:
       - cd lambda/custom && npm install
   build:
     commands:
-      - cd lambda/custom && npm test
+      - npm test
