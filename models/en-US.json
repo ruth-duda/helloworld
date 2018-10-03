@@ -1,0 +1,58 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "greeter",
+      "types": [
+
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [
+
+          ],
+          "samples": [
+            "hello",
+            "say hello",
+            "say hello world",
+            "hey",
+            "hi"
+          ]
+        },
+        {
+          "name": "SetNameIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.GB_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "my name is {name}",
+            "i'm {name}",
+            "i'm called {name}",
+            "{name}"
+          ]
+        }
+      ]
+    }
+  }
+}
