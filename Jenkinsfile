@@ -18,7 +18,6 @@ pipeline {
         }
         stage ('Test') {
         	steps {
-            sh "sudo ln -s /usr/bin/nodejs /usr/bin/node"
             sh "cd ${PACKAGE_LOCATION} && npm test"
           }
         }
