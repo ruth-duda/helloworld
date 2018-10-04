@@ -11,6 +11,13 @@ pipeline {
 
   stages {
         stage ('Install') {
+          agent {
+            docker {
+              reuseNode true
+              image "node:${NODE_VERSION}"
+              args '-v /etc/npmrc:/usr/local/etc/npmrc -v /etc/pki:/etc/pki -e HOME=.'
+            }
+          }
         	steps {
             checkout scm
             sh "cd ${PACKAGE_LOCATION} && npm install"
