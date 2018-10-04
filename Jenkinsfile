@@ -10,14 +10,16 @@ pipeline {
   agent any
 
   stages {
-        stage ('Build Dependencies') {
-        	checkout scm 
-        }
         stage ('Install') {
-        	npm install 
+        	steps {
+            checkout scm
+            sh "cd ${PACKAGE_LOCATION} && npm install"
+          }
         }
         stage ('Test') {
-        	npm test
+        	steps {
+            sh "cd ${PACKAGE_LOCATION} && npm test"
+          }
         }
     
   }
