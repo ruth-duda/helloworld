@@ -8,11 +8,11 @@ def PACKAGE_RELEASE_ARTIFACTS = 'UNKNOWN'
 
 pipeline {
   agent any
-  options { skipDefaultCheckout()
-            disableConcurrentBuilds()
-          }
 
   stages {
+        stage ('Build Dependencies') {
+        	checkout scm 
+        }
         stage ('Install') {
         	npm install 
         }
